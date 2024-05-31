@@ -1,3 +1,48 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+
+# DUB
+.dub
+docs.json
+__dummy.html
+docs/
+
+# Code coverage
+*.lst
+
+# Package directory
+.packages/
+
+# Sublime Text project files
+*.sublime-project
+
+# Visual Studio files
+*.suo
+*.user
+*.userosscache
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# env file
+.env
+
+# config file
+config.json
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -21,3 +66,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+node_modules
+jwtConfig.js

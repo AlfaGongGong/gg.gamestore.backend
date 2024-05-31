@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+const express = require('express');
+const jwt = require('jsonwebtoken');
+const authRoutes = require('./routes/authRoutes');
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const app = express();
 
-export default App;
+app.use('/api/auth', authRoutes);
+
+
+
+const checkJwt = (req, res, next) => {
+  const token = req.headers.authorization.split(' ')[1];
+  jwt.verify(token, 'tajna', (err, decoded) => {
+    if (err) {
+      return res.status(401).json({ message: 'Neispravan token' });
+    }
+    req.user = decoded;
+    next();
+  });
+
+};
+
+app.get('/api/user-dashboard', checkJwt, (req, res) => {
+
+  res.json({ message: 'Dobrodošli na korisnički dashboard' });
+
+
+});
+
+app.get('/api/admin-dashboard', checkJwt, (req, res) => {
+
+  res.json({ message: 'Dobrodošli na admin dashboard' });
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));
