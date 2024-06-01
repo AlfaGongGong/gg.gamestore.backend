@@ -68,3 +68,11 @@ yarn-debug.log*
 yarn-error.log*
 node_modules
 jwtConfig.js
+src/models/mysql/gg_database_administrators.sql
+src/models/mysql/gg_database_deals.sql
+src/models/mysql/gg_database_free_games.sql
+src/models/mysql/gg_database_games.sql
+src/models/mysql/gg_database_gaming_gear.sql
+src/models/mysql/gg_database_routines.sql
+src/models/mysql/gg_database_upcoming.sql
+src/models/mysql/gg_database_users.sql
