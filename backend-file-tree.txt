@@ -1,0 +1,37 @@
+gg.gamestore.backend/
+┣ mySql/
+┃ ┣ gg_database_carts.sql
+┃ ┣ gg_database_discounts.sql
+┃ ┣ gg_database_free_games.sql
+┃ ┣ gg_database_games.sql
+┃ ┣ gg_database_genres.sql
+┃ ┣ gg_database_payments.sql
+┃ ┣ gg_database_platforms.sql
+┃ ┣ gg_database_products.sql
+┃ ┣ gg_database_purchases.sql
+┃ ┣ gg_database_screenshots.sql
+┃ ┣ gg_database_stores.sql
+┃ ┣ gg_database_tags.sql
+┃ ┣ gg_database_users.sql
+┃ ┗ gg_database_wishlists.sql
+┣ node_modules/
+┣ src/
+┃ ┣ config/
+┃ ┃ ┗ jwtConfig.js
+┃ ┣ controllers/
+┃ ┃ ┗ authController.js
+┃ ┣ handlers/
+┃ ┃ ┗ routeHandler.js
+┃ ┣ models/
+┃ ┃ ┣ mongoDB/
+┃ ┃ ┗ mysql/
+┃ ┣ routes/
+┃ ┃ ┗ authRoutes.js
+┃ ┣ services/
+┃ ┗ utils/
+┣ .env
+┣ .gitignore
+┣ filetree.txt
+┣ index.js
+┣ package-lock.json
+┗ package.json
