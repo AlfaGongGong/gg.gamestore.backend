@@ -1,1 +1,0 @@
-SELECT g.game_id, g.background_image, g.name FROM games AS g JOIN platforms AS p ON g.game_id = p.game_id WHERE platform_id = 4, 18, 186  AND g.released >= '2023-01-01' ORDER BY g.rating > 4  LIMIT 10;
